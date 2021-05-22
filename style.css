@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap");
+
+body {
+    margin: 0;
+    font-family: "Ubuntu Mono", monospace;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+p,
+ul {
+    margin-top: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1,
+h2 {
+    font-size: 2rem;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, .3);
+}
+
+.inner-80 {
+    width: 80%;
+    margin: 0 auto;
+}
+  
+.inner-90 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+.col-30 {
+    flex: 0 1 33.333%;
+    box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, .3);
+}
+
+.sec-p {
+    padding: 80px 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.t-upper {
+    text-transform: uppercase;
+}
+
+.bg-lightgrey {
+    background-color: rgb(246, 246, 246);
+}
+
+.bg-black {
+    background-color: rgb(0, 0, 0);
+}
+
+.c-white {
+    color: rgb(255, 255, 255);
+}
+
+/* menu styles */
+.menu {
+    padding-top: 30px;
+    justify-content: space-between;
+}
+  
+.menu .logo {
+    font-weight: 700;
+}
+
+.menu ul {
+    flex: 0 1 auto;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+} 
+
+.menu ul li:not(:last-child) {
+    margin-right: 15px;
+}
+  
+.menu a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu ul .down {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 30px;
+}
+  
+.menu ul .down-list {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, .3);
+    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.menu ul .odd-list {
+    width: 7%;
+}
+  
+.menu ul.down-list li {
+    margin-right: 0;
+} 
+
+.menu ul .down-list li a {
+    display: block;
+    margin: 10px;
+}
+  
+.menu ul .down:hover .down-list {
+    display: block;
+    position: fixed;
+}
+
+.menu .hidden-lp {
+    display: none;
+}
+
+/* section-1 styles */
+.section-1 {
+    height: calc(100vh - 79.2px);
+    align-items: center;
+}
+
+h1 + p {
+    font-weight: 700;
+    margin-bottom: 50px;
+}  
+
+.section-1 button {
+    background-color: rgb(48, 47, 47);
+    border: none;
+    padding: 20px 35px;
+    font-size: 1.2rem;
+}
+
+/* section-2 styles */
+.section-2 .col-25 {
+    flex: 0 1 25%;
+    box-shadow: 0px 1px 5px 1px rgba(50, 50, 50, .3);
+    padding: 35px 0;
+    border-radius: 5px;
+    margin: 0 15px;
+}
+
+.section-2 .col-25:first-child {
+    background-color: rgb(255, 84, 68);
+}
+
+.section-2 .col-25:nth-child(2) {
+    background-color: rgb(170, 45, 182);
+}
+
+.section-2 .col-25:nth-child(3) {
+    background-color: rgb(30, 194, 164);
+}
+
+.section-2 .col-25:last-child {
+    background-color: rgb(39, 139, 224);
+}
+
+.section-2 .col-25 span:first-child {
+    font-size: 2.5rem;
+}
+
+/* section-3 styles */
+.section-3 .inside {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.section-3 .odd-wrapper {
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.section-3 span {
+    display: inline-block;
+    padding: 5px 15px;
+    text-transform: none;
+}
+
+.section-3 .inside button {
+    background-color: rgb(226, 226, 226);
+    padding: 7px 15px;
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+    border: rgb(182, 182, 182);
+    transition: background-color .3s ease-out, color .3s ease-out;
+}
+
+.section-3 .inside button:hover {
+    background-color: rgb(45, 45, 45);
+    color: rgb(255, 255, 255);
+}
+
+.section-3 .wrapper a.col-30 {
+    margin: 0 20px;
+    background-color: rgb(246, 246, 246);
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+.section-3 .wrapper a.col-30 img {
+    padding-bottom: 5px;
+}
+
+.section-3 .wrapper a.col-30:hover {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.section-3 .wrapper p {
+    padding: 10px 0;
+    background-color: white;
+    margin-bottom: 0;
+}
+
+/* section-4 styles */
+.section-4 p {
+    margin-bottom: 50px;
+    text-transform: none;
+}
+
+.section-4 hr {
+    width: 6%;
+    border-color: rgb(246, 246, 246)
+}
+
+.section-4 .col-30 {
+    box-shadow: none;
+    text-align: left;
+    margin: 25px 30px;
+}
+
+.section-4 ul {
+    line-height: 2.8;
+    padding-left: 0;
+}
+
+.section-4 ul li {
+    list-style-image: url("./images/arrow.png");
+}
+
+/* section-5 styles */
+.section-5 {
+    background-color:  rgb(70, 70, 70);
+}
+
+.section-5 ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    justify-content: center;
+}
+  
+.section-5 ul li:not(:last-child) {
+    margin-right: 20px;
+}
+
+.section-5 ul li a {
+    font-size: 1.5rem;
+    transition: background-color .3s ease-out;
+}
+
+.section-5 ul li a:hover {
+    color: rgb(45, 45, 45);
+}
+
+/* footer styles */
+footer .row {
+    width: 95%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+footer p {
+    font-size: 0.8rem;
+    margin: 20px 0;
+}
+
+/* mobile styles */
+@media (max-width: 426px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.8rem;
+    }       
+
+    .sec-p {
+        padding: 70px 0;
+    }
+
+    .menu {
+        padding: 20px 0;
+    }
+
+    .menu .logo {
+        align-self: center;
+        font-size: 1.1rem;
+    }
+
+    .menu ul {
+        display: none;
+    }
+
+    .menu .hidden-lp {
+        display: inline-block;
+    }
+
+    .section-1 div {
+        width: 60%;
+    }
+
+    .section-1 p {
+        font-size: 1rem;
+    }
+
+    .section-1 button {
+        padding: 17px 30px;
+        font-size: 1rem;
+    }
+
+    .section-2,
+    .section-3 .wrapper {
+        flex-direction: column;
+    }
+
+    .section-2 .col-25:not(:last-child),
+    .section-3 .wrapper a.col-30:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    .section-3 .inside button  {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .section-3 .inside span,
+    .section-3 .inside button {
+        margin-bottom: 10px;
+    }
+
+    .section-3 .wrapper a.col-30 {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .section-3 .odd-wrapper {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .section-2,
+    .section-4 {
+        width: 70%;
+    }
+
+    .section-4 p {
+        text-align: left;
+    }
+
+    .section-4 .hidden-mob {
+       display: none; 
+    }
+
+    .section-4 .wrapper {
+        justify-content: space-around;
+    }
+
+    .section-4 .col-30 {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .section-4 p {
+        margin-bottom: 30px;
+    }
+
+    footer p {
+        font-size: 0.6rem;
+    }
+}
