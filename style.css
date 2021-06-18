@@ -1,0 +1,137 @@
+html
+ {
+    font-size: 14px;
+} 
+
+.navbar-dark .navbar-nav .active > .nav-link, 
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, 
+.navbar-dark .navbar-nav .show > .nav-link {
+    border-left: 2px solid white;
+}
+
+.vh-70 {
+    max-height: 70vh; 
+}
+
+.carousel-caption-center {
+    top: 145px;  
+}
+
+.carousel-indicators {
+    bottom: 8px;
+}
+
+.carousel-indicators li {
+    width: 20px;
+    height: 5px;
+    margin-right: 4px;
+    margin-left: 4px;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+}
+
+.bg-img-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./img/lights.jpg") no-repeat center / cover fixed;
+}
+
+.bg-img-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./img/media.jpg") no-repeat center / cover fixed;
+}
+
+.bg-img-3 {
+    background: url("./img/image1.jpg") no-repeat top / cover fixed;
+    height: 70vh;
+}
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.bg-darkgrey {
+    background-color: #333333;
+}
+
+.bg-black {
+    background-color: #000;
+}
+
+.img-circle {
+    margin-top: -3rem;
+}
+
+.l-height {
+    line-height: 1.3;
+} 
+
+.bg-red {
+    background-color: #ff0000;
+}
+
+.custom-prev {
+    width: 25px;
+    justify-content: left;
+}
+
+.custom-next {
+    width: 25px;
+    justify-content: right;
+}
+
+.bg-accordion {
+    background-color: #212121;
+}
+
+.btn-outline-red {
+    color: #ff0000;
+    border-color: #ff0000;
+}
+
+.btn-outline-red:hover {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.border-black {
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+}
+
+
+
+@media (max-width: 426px) {
+    .navbar-brand,
+    .navbar-nav .nav-link {
+        padding-left: 1rem;
+    } 
+
+    .navbar {
+        padding-left: 0;
+    }
+
+    .img-width {
+        width: 35% !important;
+    }
+}
+
+@media (min-width: 427px) and (max-width: 992px){
+    .img-width {
+        width: 75% !important;
+    }
+}
+
+@media (max-width: 769px) {
+    .carousel-caption {
+        top: 175px;
+    }
+
+    .bg-img-3 {
+        background: url("./img/image1.jpg");
+        background-position: top left;
+        background-attachment: fixed;
+    }
+    
+    .img-circle {
+        width: 100% !important;
+    }
+}
+
