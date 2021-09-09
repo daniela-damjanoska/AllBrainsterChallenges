@@ -1,11 +1,11 @@
-let promptFrom = prompt('The message is from'),
-    promptTo = prompt('The message is to'),
-    promptSubject = prompt('Enter the subject'),
-    promptMessage = prompt('Write your message'),
-    inputFrom = document.querySelector('#from'),
-    inputTo = document.querySelector('#to'),
-    inputSubject = document.querySelector('#subject'),
-    inputMsg = document.querySelector('#msg');
+let promptFrom = prompt("The message is from"),
+    promptTo = prompt("The message is to"),
+    promptSubject = prompt("Enter the subject"),
+    promptMessage = prompt("Write your message"),
+    inputFrom = document.querySelector("#from"),
+    inputTo = document.querySelector("#to"),
+    inputSubject = document.querySelector("#subject"),
+    inputMsg = document.querySelector("#msg");
 
 class EMail {
     constructor(from, to, subject, message) {
@@ -13,9 +13,12 @@ class EMail {
         this.to = to;
         this.subject = subject;
         this.message = message;
-        this.alertMessage = function () {
-            alert(`The message is From: ${this.from}, To: ${this.to}, the Subject is: ${this.subject}, and the Message is: ${this.message}`)
-        }
+    }
+
+    alertMessage() {
+        alert(
+            `The message is From: ${this.from}, To: ${this.to}, the Subject is: ${this.subject}, and the Message is: ${this.message}`
+        );
     }
 }
 
