@@ -20,6 +20,8 @@ export default class MainContent extends Component {
             eBikes: 0,
             ideal: 0,
             cards: [],
+            filteredCards: [],
+            isActive: false,
         };
     }
 
@@ -29,6 +31,7 @@ export default class MainContent extends Component {
             .then(cards => {
                 this.setState({
                     cards,
+                    filteredCards: cards,
                     showAll: (this.state.showAll = cards.length),
                     male: (this.state.male = cards.filter(
                         product => product.gender === 'MALE'
@@ -64,18 +67,29 @@ export default class MainContent extends Component {
             });
     }
 
-    filterArr = (filterName, type) => {
+    showAllProducts = () => this.setState({ filteredCards: this.state.cards });
+
+    filterGender = gender => {
         this.setState({
-            cards: this.state.cards.filter(
-                product => product[type] === filterName
+            filteredCards: this.state.cards.filter(
+                product => product.gender === gender
             ),
         });
-        return filterName;
     };
+
+    filterBrand = brand => {
+        this.setState({
+            filteredCards: this.state.cards.filter(
+                product => product.brand === brand
+            ),
+        });
+    };
+
+    handleActive = () => this.setState({ isActive: true });
 
     render() {
         const {
-            cards,
+            filteredCards,
             showAll,
             male,
             female,
@@ -87,8 +101,9 @@ export default class MainContent extends Component {
             force,
             eBikes,
             ideal,
+            isActive,
         } = this.state;
-        
+
         return (
             <Row>
                 <Filters
@@ -103,10 +118,15 @@ export default class MainContent extends Component {
                     force={force}
                     eBikes={eBikes}
                     ideal={ideal}
+                    filterGender={this.filterGender}
+                    filterBrand={this.filterBrand}
+                    showAllProducts={this.showAllProducts}
+                    handleActive={this.handleActive}
+                    isActive={isActive}
                 />
                 <Col xs={9}>
                     <Row className="pt-3 px-3">
-                        {cards.map(({ name, price, image }) => (
+                        {filteredCards.map(({ name, price, image }) => (
                             <Cards
                                 key={uuid()}
                                 name={name}
