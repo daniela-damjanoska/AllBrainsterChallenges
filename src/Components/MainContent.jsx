@@ -67,13 +67,15 @@ export default class MainContent extends Component {
             });
     }
 
-    showAllProducts = () => this.setState({ filteredCards: this.state.cards });
+    showAllProducts = () =>
+        this.setState({ filteredCards: this.state.cards, isActive: true });
 
     filterGender = gender => {
         this.setState({
             filteredCards: this.state.cards.filter(
                 product => product.gender === gender
             ),
+            isActive: true,
         });
     };
 
@@ -82,10 +84,9 @@ export default class MainContent extends Component {
             filteredCards: this.state.cards.filter(
                 product => product.brand === brand
             ),
+            isActive: true,
         });
     };
-
-    handleActive = () => this.setState({ isActive: true });
 
     render() {
         const {
@@ -121,7 +122,6 @@ export default class MainContent extends Component {
                     filterGender={this.filterGender}
                     filterBrand={this.filterBrand}
                     showAllProducts={this.showAllProducts}
-                    handleActive={this.handleActive}
                     isActive={isActive}
                 />
                 <Col xs={9}>

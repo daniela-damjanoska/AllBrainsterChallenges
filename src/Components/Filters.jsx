@@ -16,7 +16,6 @@ export default function Filters({
     filterGender,
     filterBrand,
     showAllProducts,
-    // handleActive,
     isActive,
 }) {
     return (
@@ -35,9 +34,6 @@ export default function Filters({
                 className={
                     isActive ? 'filter-items pb-2 active' : 'filter-items pb-2'
                 }
-                // onClick={() => {
-                //     filterGender('MALE'), handleActive();
-                // }}
                 onClick={() => filterGender('MALE')}
             >
                 <span>Male</span>
