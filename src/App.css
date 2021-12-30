@@ -1,0 +1,90 @@
+h2 {
+    text-align: center;
+}
+
+.App {
+    width: 425px;
+    background-color: #d3d3d3;
+    margin: 0 auto;
+}
+
+.Header h1 {
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+}
+
+.Header img {
+    filter: brightness(60%);
+}
+
+.Header img,
+.Artist img {
+    display: block;
+    width: 100%;
+}
+
+.Border {
+    height: 10px;
+    background-color: #00ffff;
+}
+
+.Browse {
+    padding: 10px 20px;
+}
+
+.Artist {
+    display: block;
+    padding: 10px 0;
+    position: relative;
+}
+
+.Artist span {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    background-color: #2196f3;
+    color: white;
+    padding: 10px;
+}
+
+.ArtistPage {
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.ArtistPage img {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.ArtistPage .Albums {
+    padding: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ArtistPage .Albums img {
+    flex-basis: 50%;
+    margin-left: 0;
+}
+
+.ErrorPage {
+    text-align: center;
+    height: calc(100vh - 350px);
+    padding-top: 100px;
+}
+
+.ErrorPage h2,
+.ErrorPage a {
+    color: #2196f3;
+}
+
+.ErrorPage a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
